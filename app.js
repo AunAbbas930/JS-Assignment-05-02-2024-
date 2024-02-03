@@ -219,3 +219,97 @@ for (var i = 1; i <= 10; i++) {
     document.write(num + " x " + i + " = " + result + "<br>");
     }
 }
+
+function a201()
+{
+var a = +prompt("Assign a value (number) to a:");
+document.write("Result:<br>The value of a is: " + a + "<br>.....................................<br><br>");
+document.write("<br>The value of ++a is: " + ++a);
+document.write("<br>Now the value of a is: " + a);
+document.write("<br>");
+document.write("<br>The value of a++ is: " + a++);
+document.write("<br>Now the value of a is: " + a);
+document.write("<br>");
+document.write("<br>The value of --a is: " + --a);
+document.write("<br>Now the value of a is: " + a);
+document.write("<br>");
+document.write("<br>The value of a-- is: " + a--);
+document.write("<br>Now the value of a is: " + a);
+document.write("<br>");
+}
+
+function a202()
+{
+document.write("<b>Output of:</b>--a<br>............................<br>");
+var a = 2, b = 1; 
+document.write("a = " + a + "<br>b = " + b + "<br><br>");
+var result = --a;
+document.write("<b>Result:</b> " + result + "<br><b>Explaination:</b> '--' before a means a prefix decrement operator.");
+document.write("<br>It decreased the value of 'a' by 1, before using variable in code");
+document.write("<br>Value of 'a' is reduced by 1, which becomes 1. It appears as result.<br><br><br>");
+
+document.write("<br><br><b>Output of:</b> --a - --b<br>............................<br>");
+var a = 2, b = 1; 
+document.write("a = " + a + "<br>b = " + b + "<br><br>");
+var result = --a - --b;
+document.write("<b>Result:</b> " + result + "<br><b>Explaination:</b> '--' before 'b' again means a prefix decrement operator.");
+document.write("<br>It decreased the value of b by 1, before using variable in code. Result is subtracted from '--a'.");
+document.write("<br>Value of 'a' is reduced by 1, which becomes 1. Value of 'b' is also reduced by 1, and becomes 0.");
+document.write("<br>So the results appears as 1 - 0, which is 1.<br><br><br>");
+
+document.write("<br><br><b>Output of:</b> --a - --b + ++b<br>............................<br>");
+var a = 2, b = 1; 
+document.write("a = " + a + "<br>b = " + b + "<br><br>");
+var result = --a - --b + ++b;
+document.write("<b>Result:</b> " + result + "<br><b>Explaination:</b> '++' before 'b' is a prefix increment operator.");
+document.write("<br>It increased the value of b by 1, before using variable in code. Result is added to '--a - --b'");
+document.write("<br>Value of 'a' is reduced by 1, which becomes 1. Value of 'b' is also reduced by 1, and becomes 0.");
+document.write("<br>Again a prefix increment '++b' adds 1 to 'b' and 'b' becomes 1. So the results appears as 1 - 0 + 1, which is 2.<br><br><br>");
+
+document.write("<br><br><b>Output of:</b> --a - --b + ++b + b--<br>............................<br>");
+var a = 2, b = 1; 
+document.write("a = " + a + "<br>b = " + b + "<br><br>");
+var result = --a - --b + ++b + b--;
+document.write("<b>Result:</b> " + result + "<br><b>Explaination:</b> '--' after 'b' is a postfix decrement operator.");
+document.write("<br>It decreased the value by 1, after using variable in code. Result is added to '--a - --b + ++b + b--");
+document.write("<br>Value of 'a' is reduced by 1, which becomes 1. Value of 'b' is also reduced by 1, and becomes 0.");
+document.write("<br>Again a prefix increment '++b' adds 1 to 'b' and 'b' becomes 1. At last, appears 'b--' which is a postfix decrement.");
+document.write("As postfix acts after usage of variable, value of 'b' doesn't change and the results appears as 1 - 0 + 1 + 1, which is 3.<br><br><br>");
+}
+
+function a203()
+{
+var name = prompt("Enter your name:");
+var message = "Hi " + name + ". Have a nice day.";
+alert(message);
+}
+
+function a204()
+{
+var num = +prompt("Enter a number:");
+if(num===0)
+  {
+  num = 5;
+  }
+document.write("<b>Multiplication Table for " + num + ":</b><br><br>");
+for (var i = 1; i <= 10; i++) {
+    var result = num * i;
+    document.write(num + " x " + i + " = " + result + "<br>");
+    }
+}
+
+function a205()
+{
+var sub1 = prompt("Enter name of 1st Subject:");
+var sub2 = prompt("Enter name of 2nd Subject:");
+var sub3 = prompt("Enter name of 3rd Subject:");
+var marks1 = +prompt("Enter marks of 1st Subject:");
+var marks2 = +prompt("Enter marks of 2nd Subject:");
+var marks3 = +prompt("Enter marks of 3rd Subject:");
+var total = marks1 + marks2 + marks3;
+document.write("<table><tr><td><b>Subject</b></td><td><b>Total Marks</b></td><td><b>Obtained Marks</b></td><td><b>Percentage</b></td></tr>");
+document.write("<tr><td>" + sub1 + "</td><td>100</td><td>" + marks1 + "</td><td>" + marks1 + "%</td></tr>");
+document.write("<tr><td>" + sub2 + "</td><td>100</td><td>" + marks2 + "</td><td>" + marks2 + "%</td></tr>");
+document.write("<tr><td>" + sub3 + "</td><td>100</td><td>" + marks3 + "</td><td>" + marks3 + "%</td></tr>");
+document.write("<tr><td><b>Total</b></td><td><b>300</b></td><td><b>" + total + "</td><td><b>" + total/3 + "%</b></td></tr></table>");
+}
