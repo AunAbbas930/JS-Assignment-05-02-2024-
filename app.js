@@ -313,3 +313,34 @@ document.write("<tr><td>" + sub2 + "</td><td>100</td><td>" + marks2 + "</td><td>
 document.write("<tr><td>" + sub3 + "</td><td>100</td><td>" + marks3 + "</td><td>" + marks3 + "%</td></tr>");
 document.write("<tr><td><b>Total</b></td><td><b>300</b></td><td><b>" + total + "</td><td><b>" + total/3 + "%</b></td></tr></table>");
 }
+
+function karachi()
+{
+var city = prompt("Enter name of the city:");
+if(city==="Karachi")
+  {
+  alert("Welcome to the city of lights.");
+  }
+}
+
+function gender()
+{
+var gender = prompt("Please enter your gender (male / female):");
+if(gender==="male")
+  {
+  alert("Good Morning Sir!");
+  }
+if(gender==="female")
+  {
+  alert("Good Morning Ma'am!");
+  }
+}
+
+function fuel()
+{
+var fuel = +prompt("Enter quantity of remaining fuel (in Litres):");
+if(fuel < 0.25)
+  {
+  alert("Please refill the fuel in your car!");
+  }
+}
