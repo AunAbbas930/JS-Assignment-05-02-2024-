@@ -4,19 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title id="title">JavaScript Assignment - February 5th, 2024</title>
-    <title id="changed">See! this changed.</title>
     
     <script src="app.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div style="display: flex; flex-direction: row; position: fixed; top: 0; left: 0; z-index:99; background-color: #01438f; width:100%;">
+<div id="navbar" style="display: flex; flex-direction: row; position: fixed; top: 0; left: 0; z-index:99; background-color: #01438f; width:100%;">
   <a class="tabletFix" href="index.html">Home</a>
   <a class="tabletFix" id="selected" href="assign1.html">Assignment-1</a>
   <a class="tabletFix" href="assign2.html">Assignment-2</a>
   <a class="tabletFix" href="assign3.html">Assignment-3</a>
 </div>
-<div style="display: flex; flex-direction: column; object-align: left;">
+<div id="questions" style="display: flex; flex-direction: column; object-align: left;">
   <br><br><br>
 <button class="btn" onClick="welcome()">
   1. Write a script to greet your website visitor using JS alert box. (Welcome to 
@@ -35,14 +34,14 @@ valid password)
 <button class="btn" onClick="message2()"> 
 5. Make use of alerts in your new/existing HTML & CSS project. 
 </button>  
-<!-- <button class="btn" onClick="addElements()"> 
+<button class="btn" onClick="addElements()" id="addBody"> 
 6. Practice placement of element in following sections of your project in 
 exercise 5: <br>
 a. Head <br>
 b. Body (before your page’s HTML) <br>
 c. Body (inside your page’s HTML) <br>
 d. Body (after your page’s HTML)
-</button> -->
+</button>
 <button class="btn" onClick="declareUsername()">
 7. Declare a variable called username.
 </button>
@@ -78,11 +77,11 @@ message in an alert box:<br>
 14. Declare a variable called age & assign to it your age. Show your age in an 
 alert box. 
 </button>
-<!-- <button class="btn">
+<button class="btn" onClick="visits()">
 15. Declare & initialize a variable to keep track of how many times a visitor has 
 visited a web page. Show his/her number of visits on your web page. For 
 example: “You have visited this site N times”. 
-</button> -->
+</button>
 <button class="btn" onClick="birthYear()">
 16. Declare a variable called birthYear & assign to it your birth year. <br>Show the 
 following message in your browser: <br>
